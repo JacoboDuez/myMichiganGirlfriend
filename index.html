@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Michigan Girlfriend ❤️</title>
+
+ 
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+ 
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+
+      color: white;
+
+      min-height: 100vh;
+
+    }
+
+ 
+
+    /* NAVIGATION */
+
+ 
+
+    nav {
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      padding: 20px;
+
+      background: rgba(0, 0, 0, 0.2);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      backdrop-filter: blur(10px);
+
+    }
+
+ 
+
+    nav button {
+
+      border: none;
+
+      padding: 12px 20px;
+
+      border-radius: 30px;
+
+      cursor: pointer;
+
+      background: rgba(255,255,255,0.2);
+
+      color: white;
+
+      font-size: 15px;
+
+      transition: 0.3s;
+
+    }
+
+ 
+
+    nav button:hover,
+
+    nav button.active {
+
+      background: white;
+
+      color: #ff4f81;
+
+    }
+
+ 
+
+    /* TABS */
+
+ 
+
+    .tab {
+
+      display: none;
+
+      max-width: 1100px;
+
+      margin: auto;
+
+      padding: 60px 25px;
+
+      min-height: 80vh;
+
+    }
+
+ 
+
+    .tab.active {
+
+      display: block;
+
+      animation: fadeIn 0.5s ease;
+
+    }
+
+ 
+
+    @keyframes fadeIn {
+
+      from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+      }
+
+ 
+
+      to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+      }
+
+    }
+
+ 
+
+    h1 {
+
+      text-align: center;
+
+      font-size: clamp(2.5rem, 7vw, 5rem);
+
+      margin-bottom: 20px;
+
+    }
+
+ 
+
+    h2 {
+
+      text-align: center;
+
+      font-size: 2.5rem;
+
+      margin-bottom: 15px;
+
+    }
+
+ 
+
+    .subtitle {
+
+      text-align: center;
+
+      font-size: 1.2rem;
+
+      margin-bottom: 40px;
+
+    }
+
+ 
+
+    /* HOME */
+
+ 
+
+    .heart {
+
+      text-align: center;
+
+      font-size: 80px;
+
+      animation: heartbeat 1.5s infinite;
+
+    }
+
+ 
+
+    @keyframes heartbeat {
+
+      0%, 100% {
+
+        transform: scale(1);
+
+      }
+
+ 
+
+      50% {
+
+        transform: scale(1.15);
+
+      }
+
+    }
+
+ 
+
+    .home-card {
+
+      max-width: 700px;
+
+      margin: 40px auto;
+
+      padding: 40px;
+
+      text-align: center;
+
+      line-height: 1.8;
+
+      font-size: 1.2rem;
+
+      background: rgba(255,255,255,0.15);
+
+      border-radius: 25px;
+
+      backdrop-filter: blur(10px);
+
+    }
+
+ 
+
+    /* VIDEOS - FLEXBOX */
+
+ 
+
+    .video-container {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 25px;
+
+    }
+
+ 
+
+    .video-card {
+
+      flex: 1 1 300px;
+
+      max-width: 500px;
+
+      padding: 15px;
+
+      background: rgba(255,255,255,0.15);
+
+      border-radius: 20px;
+
+      backdrop-filter: blur(10px);
+
+    }
+
+ 
+
+    .video-card video {
+
+      width: 100%;
+
+      border-radius: 15px;
+
+      display: block;
+
+    }
+
+ 
+
+    .video-card h3 {
+
+      text-align: center;
+
+      margin-top: 15px;
+
+    }
+
+ 
+
+    /* PROPOSAL */
+
+ 
+
+    .proposal-container {
+
+      text-align: center;
+
+      padding: 40px 20px;
+
+    }
+
+ 
+
+    .proposal-container p {
+
+      max-width: 650px;
+
+      margin: 30px auto;
+
+      font-size: 1.3rem;
+
+      line-height: 1.8;
+
+    }
+
+ 
+
+    .proposal-button {
+
+      padding: 18px 40px;
+
+      border: none;
+
+      border-radius: 50px;
+
+      background: white;
+
+      color: #ff4f81;
+
+      font-size: 1.2rem;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+    }
+
+ 
+
+    .proposal-button:hover {
+
+      transform: scale(1.1);
+
+    }
+
+ 
+
+    /* RELATIONSHIP STIPULATIONS - GRID */
+
+ 
+
+    .rules-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+      gap: 20px;
+
+      margin-top: 40px;
+
+    }
+
+ 
+
+    .rule {
+
+      padding: 25px;
+
+      border-radius: 20px;
+
+      background: rgba(255,255,255,0.15);
+
+      backdrop-filter: blur(10px);
+
+      transition: 0.3s;
+
+    }
+
+ 
+
+    .rule:hover {
+
+      transform: translateY(-5px);
+
+      background: rgba(255,255,255,0.25);
+
+    }
+
+ 
+
+    .rule-icon {
+
+      font-size: 40px;
+
+      margin-bottom: 15px;
+
+    }
+
+ 
+
+    .rule h3 {
+
+      margin-bottom: 10px;
+
+    }
+
+ 
+
+    .rule p {
+
+      line-height: 1.6;
+
+      opacity: 0.9;
+
+    }
+
+ 
+
+    /* MODAL */
+
+ 
+
+    .modal {
+
+      display: none;
+
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(0,0,0,0.75);
+
+      z-index: 1000;
+
+      justify-content: center;
+
+      align-items: center;
+
+      padding: 20px;
+
+    }
+
+ 
+
+    .modal.show {
+
+      display: flex;
+
+    }
+
+ 
+
+    .modal-content {
+
+      width: min(600px, 100%);
+
+      background: white;
+
+      color: #ff4f81;
+
+      padding: 50px 30px;
+
+      border-radius: 30px;
+
+      text-align: center;
+
+      animation: popIn 0.4s ease;
+
+    }
+
+ 
+
+    @keyframes popIn {
+
+      from {
+
+        transform: scale(0.5);
+
+        opacity: 0;
+
+      }
+
+ 
+
+      to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+      }
+
+    }
+
+ 
+
+    .modal-heart {
+
+      font-size: 70px;
+
+    }
+
+ 
+
+    .modal-content h2 {
+
+      margin: 20px 0;
+
+    }
+
+ 
+
+    .modal-content p {
+
+      font-size: 1.2rem;
+
+      line-height: 1.7;
+
+      margin-bottom: 25px;
+
+    }
+
+ 
+
+    .yes-button,
+
+    .maybe-button {
+
+      padding: 14px 30px;
+
+      border: none;
+
+      border-radius: 30px;
+
+      font-size: 1rem;
+
+      cursor: pointer;
+
+      margin: 5px;
+
+    }
+
+ 
+
+    .yes-button {
+
+      background: #ff4f81;
+
+      color: white;
+
+    }
+
+ 
+
+    .maybe-button {
+
+      background: #ddd;
+
+      color: #555;
+
+    }
+
+ 
+
+    .yes-button:hover {
+
+      transform: scale(1.08);
+
+    }
+
+ 
+
+    /* CONFETTI */
+
+ 
+
+    .confetti {
+
+      position: fixed;
+
+      top: -20px;
+
+      width: 10px;
+
+      height: 10px;
+
+      z-index: 2000;
+
+      animation: fall 3s linear forwards;
+
+    }
+
+ 
+
+    @keyframes fall {
+
+      to {
+
+        transform: translateY(110vh) rotate(720deg);
+
+      }
+
+    }
+
+ 
+
+    footer {
+
+      text-align: center;
+
+      padding: 30px;
+
+      opacity: 0.8;
+
+    }
+
+  </style>
+
+</head>
+
+ 
+
+<body>
+
+ 
+
+  <!-- ========================================= -->
+
+  <!-- NAVIGATION -->
+
+  <!-- ========================================= -->
+
+ 
+
+  <nav>
+
+ 
+
+    <button
+
+      class="tab-button active"
+
+      onclick="showTab('home', this)">
+
+      ❤️ Home
+
+    </button>
+
+ 
+
+    <button
+
+      class="tab-button"
+
+      onclick="showTab('videos', this)">
+
+      🎥 Our Videos
+
+    </button>
+
+ 
+
+    <button
+
+      class="tab-button"
+
+      onclick="showTab('proposal', this)">
+
+      ? The Question
+
+    </button>
+
+ 
+
+    <button
+
+      class="tab-button"
+
+      onclick="showTab('rules', this)">
+
+      📜 Stipulations
+
+    </button>
+
+ 
+
+  </nav>
+
+ 
+
+  <!-- ========================================= -->
+
+  <!-- HOME -->
+
+  <!-- ========================================= -->
+
+ 
+
+  <section id="home" class="tab active">
+
+ 
+
+    <div class="heart">
+
+      ❤️
+
+    </div>
+
+ 
+
+    <h1>Our Little Story</h1>
+
+ 
+
+    <p class="subtitle">
+
+      A website made for my a cool person.
+
+    </p>
+
+ 
+
+    <div class="home-card">
+
+ 
+
+      <p>
+
+        I wanted to make something a little different for you.
+
+      </p>
+
+ 
+
+      <br>
+
+ 
+
+      <p>
+
+        So I put together some of our memories,
+
+        a few completely reasonable relationship stipulations,
+
+        and one very important question.
+
+      </p>
+
+ 
+
+      <br>
+
+ 
+
+      <p>
+
+        Take your time exploring...
+
+        ❤️
+
+      </p>
+
+ 
+
+    </div>
+
+ 
+
+  </section>
+
+ 
+
+  <!-- ========================================= -->
+
+  <!-- VIDEOS -->
+
+  <!-- ========================================= -->
+
+ 
+
+  <section id="videos" class="tab">
+
+ 
+
+    <h2>🎥 Our Memories</h2>
+
+ 
+
+    <p class="subtitle">
+
+      Some of my favorite moments with you.
+
+    </p>
+
+ 
+
+    <!-- FLEXBOX CONTAINER -->
+
+ 
+
+    <div class="video-container">
+
+ 
+
+      <div class="video-card">
+
+ 
+
+        <video controls>
+
+          <source src="assets/Jill_Anchoring.mp4" type="video/mp4">
+
+            My preferred boat driver
+
+        </video>
+
+ 
+
+        <h3>My Preferred Boat Driver ❤️</h3>
+
+ 
+
+      </div>
+
+ 
+
+      <div class="video-card">
+
+ 
+
+        <video controls>
+
+          <source src="assets/Jill_Rescueing.mp4" type="video/mp4">
+
+            Jill Rescueing me At Platte River
+
+        </video>
+
+ 
+
+        <h3>Jill Rescueing me at Platte River 🥰</h3>
+
+ 
+
+      </div>
+
+ 
+
+      <div class="video-card">
+
+ 
+
+        <video controls>
+
+          <source src="assets/Jill_Showinatthe.mp4" type="video/mp4">
+
+             Me skiing because why not!
+
+        </video>
+
+ 
+
+        <h3>Jill being silly 😂</h3>
+
+ 
+
+      </div>
+
+ 
+
+      <div class="video-card">
+
+ 
+
+        <video controls>
+
+          <source src="assets/Jill_Kayakingn.mp4" type="video/mp4">
+
+            Jill Kayaking at Platte River
+
+
+        </video>
+
+ 
+
+        <h3> Upper Platte Magic Weekend  </h3>
+
+ 
+
+      </div>
+
+ 
+
+    </div>
+
+ 
+
+  </section>
+
+ 
+
+  <!-- ========================================= -->
+
+  <!-- PROPOSAL -->
+
+  <!-- ========================================= -->
+
+ 
+
+  <section id="proposal" class="tab">
+
+ 
+
+    <div class="proposal-container">
+
+ 
+
+      <div class="heart">
+
+        💖
+
+      </div>
+
+ 
+
+      <h1>I Have a Question...</h1>
+
+ 
+
+      <p>
+
+ 
+
+        I really enjoy every moment we spend together.
+
+ 
+
+        <br><br>
+
+ 
+
+        The laughs, the random conversations,
+
+        the memories, and everything in between.
+
+ 
+
+        <br><br>
+
+ 
+
+        So I figured there was only one way to properly ask...
+
+ 
+
+      </p>
+
+ 
+
+      <button
+
+        class="proposal-button"
+
+        onclick="openProposal()">
+
+ 
+
+        💌 Click Here
+
+ 
+
+      </button>
+
+ 
+
+    </div>
+
+ 
+
+  </section>
+
+ 
+
+  <!-- ========================================= -->
+
+  <!-- RELATIONSHIP STIPULATIONS -->
+
+  <!-- ========================================= -->
+
+ 
+
+  <section id="rules" class="tab">
+
+ 
+
+    <h2>📜 Relationship Stipulations</h2>
+
+ 
+
+    <p class="subtitle">
+
+      Please review the following terms and conditions.
+
+    </p>
+
+ 
+
+    <!-- CSS GRID -->
+
+ 
+
+    <div class="rules-grid">
+
+ 
+
+      <div class="rule">
+
+ 
+
+        <div class="rule-icon">
+
+          😂
+
+        </div>
+
+ 
+
+        <h3>Unlimited Laughing</h3>
+
+ 
+
+        <p>
+
+          Both parties agree to laugh at each other's
+
+          terrible jokes, regardless of how questionable
+
+          the joke actually is.
+
+        </p>
+
+ 
+
+      </div>
+
+ 
+
+      <div class="rule">
+
+ 
+
+        <div class="rule-icon">
+
+          🍕
+
+        </div>
+
+ 
+
+        <h3>Food Sharing</h3>
+
+ 
+
+        <p>
+
+          Sharing food is strongly encouraged.
+
+          Stealing the last bite without permission
+
+          may result in some biting.
+
+        </p>
+
+ 
+
+      </div>
+
+ 
+
+      <div class="rule">
+
+ 
+
+        <div class="rule-icon">
+
+          🤗
+
+        </div>
+
+ 
+
+        <h3>Mandatory Cuddles</h3>
+
+ 
+
+        <p>
+
+          Cuddles must be provided whenever reasonably
+
+          requested by either party.
+
+        </p>
+
+ 
+
+      </div>
+
+ 
+
+      <div class="rule">
+
+ 
+
+        <div class="rule-icon">
+
+          💬
+
+        </div>
+
+ 
+
+        <h3>Communication</h3>
+
+ 
+
+        <p>
+
+          Both parties agree to communicate honestly,
+
+          listen to each other, and talk through problems.
+
+        </p>
+
+ 
+
+      </div>
+
+ 
+
+      <div class="rule">
+
+ 
+
+        <div class="rule-icon">
+
+          🎬
+
+        </div>
+
+ 
+
+        <h3>Movie Rights</h3>
+
+ 
+
+        <p>
+
+          Movie selection shall be negotiated fairly,
+
+          although one party may occasionally win by
+
+          supplying snacks.
+
+        </p>
+
+ 
+
+      </div>
+
+ 
+
+      <div class="rule">
+
+ 
+
+        <div class="rule-icon">
+
+          p❤️
+
+        </div>
+
+ 
+
+        <h3>Mutual Support</h3>
+
+ 
+
+        <p>
+
+          Both parties agree to support each other's
+
+          dreams, celebrate the good days, and be there
+
+          during the difficult ones.
+
+        </p>
+
+ 
+
+      </div>
+
+ 
+
+      <div class="rule">
+
+ 
+
+        <div class="rule-icon">
+
+          📸
+
+        </div>
+
+ 
+
+        <h3>Memory Making</h3>
+
+ 
+
+        <p>
+
+          Both parties agree to make as many amazing,
+
+          ridiculous, spontaneous memories as possible.
+
+        </p>
+
+ 
+
+      </div>
+
+ 
+
+     
+
+ 
+
+    </div>
+
+ 
+
+  </section>
+
+ 
+
+  <!-- ========================================= -->
+
+  <!-- PROPOSAL POPUP -->
+
+  <!-- ========================================= -->
+
+ 
+
+  <div id="proposalModal" class="modal">
+
+ 
+
+    <div class="modal-content">
+
+ 
+
+      <div class="modal-heart">
+
+        💖
+
+      </div>
+
+ 
+
+      <h2>Jill,Would You Be My Running/Tennis #Adventure Partner?</h2>
+
+ 
+
+      <p>
+
+ 
+
+        I don't need a perfect relationship.
+
+ 
+
+        <br>
+
+ 
+
+        I just want one with you.
+
+ 
+
+        <br><br>
+
+ 
+
+        So...
+
+ 
+
+        <br><br>
+
+ 
+
+        <strong>
+
+          Will you be my girlfriend? ❤️
+
+        </strong>
+
+ 
+
+      </p>
+
+ 
+
+      <button
+
+        class="yes-button"
+
+        onclick="sayYes()">
+
+ 
+
+        YES! ❤️
+
+ 
+
+      </button>
+
+ 
+
+      <button
+
+        class="maybe-button"
+
+        onclick="closeProposal()">
+
+ 
+
+        No Thank you mister from another sister...
+
+ 
+
+      </button>
+
+ 
+
+    </div>
+
+ 
+
+  </div>
+
+ 
+
+  <!-- ========================================= -->
+
+  <!-- FOOTER -->
+
+  <!-- ========================================= -->
+
+ 
+
+  <footer>
+
+ 
+
+    Made with ❤️ just for you.
+
+ 
+
+  </footer>
+
+ 
+
+  <!-- ========================================= -->
+
+  <!-- JAVASCRIPT -->
+
+  <!-- ========================================= -->
+
+ 
+
+  <script>
+
+ 
+
+    /*
+
+      TAB SWITCHING
+
+    */
+
+ 
+
+    function showTab(tabId, button) {
+
+ 
+
+      // Hide all tabs
+
+      const tabs = document.querySelectorAll(".tab");
+
+ 
+
+      tabs.forEach(function(tab) {
+
+        tab.classList.remove("active");
+
+      });
+
+ 
+
+      // Remove active state from navigation buttons
+
+      const buttons = document.querySelectorAll(".tab-button");
+
+ 
+
+      buttons.forEach(function(btn) {
+
+        btn.classList.remove("active");
+
+      });
+
+ 
+
+      // Show selected tab
+
+      document.getElementById(tabId).classList.add("active");
+
+ 
+
+      // Highlight selected navigation button
+
+      button.classList.add("active");
+
+ 
+
+      // Scroll to top
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+      });
+
+ 
+
+    }
+
+ 
+
+    /*
+
+      OPEN PROPOSAL POPUP
+
+    */
+
+ 
+
+    function openProposal() {
+
+ 
+
+      document
+
+        .getElementById("proposalModal")
+
+        .classList.add("show");
+
+ 
+
+    }
+
+ 
+
+    /*
+
+      CLOSE PROPOSAL POPUP
+
+    */
+
+ 
+
+    function closeProposal() {
+
+ 
+
+      document
+
+        .getElementById("proposalModal")
+
+        .classList.remove("show");
+
+ 
+
+    }
+
+ 
+
+    /*
+
+      SHE SAID YES ❤️
+
+    */
+
+ 
+
+    function sayYes() {
+
+ 
+
+      const modalContent =
+
+        document.querySelector(".modal-content");
+
+ 
+
+      modalContent.innerHTML = `
+
+ 
+
+        <div class="modal-heart">
+
+          🥰❤️🎉
+
+        </div>
+
+ 
+
+        <h2>
+
+          SHE SAID YES!
+
+        </h2>
+
+ 
+
+        <p>
+
+ 
+
+          Best. Decision. Ever.
+
+ 
+
+          <br><br>
+
+ 
+
+          Officially upgrading our relationship status...
+
+ 
+
+          <br><br>
+
+ 
+
+          <strong>
+
+            Girlfriend acquired! 💕
+
+          </strong>
+
+ 
+
+        </p>
+
+ 
+
+        <button
+
+          class="yes-button"
+
+          onclick="closeProposal()">
+
+ 
+
+          Let's Go! ❤️
+
+ 
+
+        </button>
+
+ 
+
+      `;
+
+ 
+
+      createConfetti();
+
+ 
+
+    }
+
+ 
+
+    /*
+
+      CONFETTI EFFECT
+
+    */
+
+ 
+
+    function createConfetti() {
+
+ 
+
+      const colors = [
+
+        "#ff4f81",
+
+        "#ffffff",
+
+        "#ffd166",
+
+        "#ff758c",
+
+        "#ffb3c6"
+
+      ];
+
+ 
+
+      for (let i = 0; i < 100; i++) {
+
+ 
+
+        const confetti =
+
+          document.createElement("div");
+
+ 
+
+        confetti.classList.add("confetti");
+
+ 
+
+        confetti.style.left =
+
+          Math.random() * 100 + "vw";
+
+ 
+
+        confetti.style.background =
+
+          colors[
+
+            Math.floor(
+
+              Math.random() * colors.length
+
+            )
+
+          ];
+
+ 
+
+        confetti.style.animationDelay =
+
+          Math.random() * 1.5 + "s";
+
+ 
+
+        confetti.style.animationDuration =
+
+          2 + Math.random() * 2 + "s";
+
+ 
+
+        document.body.appendChild(confetti);
+
+ 
+
+        setTimeout(function() {
+
+ 
+
+          confetti.remove();
+
+ 
+
+        }, 5000);
+
+ 
+
+      }
+
+ 
+
+    }
+
+ 
+
+  </script>
+
+ 
+
+</body>
+
+</html>
+
+ 
